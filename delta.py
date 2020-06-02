@@ -16,8 +16,8 @@ def delta(res_1=[['Non-Ip PDN sessions        ', '0'],
         ele = 1
         for (m, n) in zip(i, j):
             # print ("n = "+n)
-            # if str(m).isdigit() and str(n).isdigit():
-            if m.isdigit() and n.isdigit():
+            if str(m).isdigit() and str(n).isdigit():
+            #if m.isdigit() and n.isdigit():
                 temp_res.append('{0: <16}'.format(" "+str(n)))
                 temp_res.append('{0: <12}'.format(str(int(n) - int(m))))
                 temp_res.append('{0: <12}'.format("(" + str(float(int(n) - int(m)) / interval) + ")"))

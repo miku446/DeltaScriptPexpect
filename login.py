@@ -42,8 +42,12 @@ def login(argv):
     # hostname = raw_input('hostname: ')
     username = raw_input('username: ')
     password = getpass.getpass('password: ')
+    if username == "":
+        username = "mike"
+    if password == "":
+        password = "test123"
     # if not s.login(hostname, username, password, auto_prompt_reset=False):
-    if not s.login(hostname, "mike", "test123", auto_prompt_reset=False):
+    if not s.login(hostname, username, password, auto_prompt_reset=False):
         print("SSH session failed on login.")
         print(str(s))
     else:

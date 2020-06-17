@@ -40,8 +40,10 @@ def login(argv):
             hostname = arg
     s = pxssh.pxssh()
     # hostname = raw_input('hostname: ')
-    username = raw_input('username: ')
-    password = getpass.getpass('password: ')
+    #username = raw_input('username: ')
+    #password = getpass.getpass('password: ')
+    username = ""
+    password = ""
     if username == "":
         username = "mike"
     if password == "":
